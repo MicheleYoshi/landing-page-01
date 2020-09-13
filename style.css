@@ -1,56 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 body {
-width: 100%;
-margin: 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .overlay {
-content: '';
-position: fixed;
-display: block;
-height: 100%; 
-width: 100%;
-background: black;
-opacity: 0.7;
-z-index: 2;
+    content: '';
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.7;
+    z-index: 2;
 }
 
 .storefront-img {
-position: fixed;
-width: 100%;
-margin: 0;
-z-index: -1;
+    height: 100vh;
+    min-height: 200px;
+    background-image: url('https://images.squarespace-cdn.com/content/53938fb9e4b045b0b04475fc/1599984731250-9DTU5R5OQ35T4IEE14Z2/japanese-landing.jpg?format=1000w&content-type=image%2Fjpeg');
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
 }
 
 .welcome {
-font-family: 'Kosugi Maru', sans-serif;
-color: white;
-cursor: default;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-width: 100%;
-height: 100px;
-margin: auto;
-display: block;
-text-align: center;
-z-index: 5;
+    font-family: 'Kosugi Maru', sans-serif;
+    color: white;
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    z-index: 5;
 }
 
 h1 span {
-position: relative;
-top: 20px;
-display: inline-block;
-animation: bounce 0.5s ease infinite alternate;
--webkit-animation: bounce 0.5s ease infinite alternate;
-font-size: 60px;
-color: #fff;
-text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
-    0 5px 0 #a9a9a9, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce 0.5s ease infinite alternate;
+    -webkit-animation: bounce 0.5s ease infinite alternate;
+    font-size: 7vw;
+    color: #fff;
+    text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
+        0 5px 0 #a9a9a9, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+        0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 h1 span:nth-child(2) {
@@ -95,20 +99,20 @@ h1 span:nth-child(9) {
 
 @keyframes bounce {
     100% {
-    top: -20px;
-    text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
-    0 5px 0 #a9a9a9, 0 6px 0 #a9a9a9, 0 7px 0 #a9a9a9, 0 8px 0 #a9a9a9, 0 9px 0 #a9a9a9,
-    0 50px 25px rgba(0, 0, 0, 0.7);
-}
+        top: -20px;
+        text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
+            0 5px 0 #a9a9a9, 0 6px 0 #a9a9a9, 0 7px 0 #a9a9a9, 0 8px 0 #a9a9a9, 0 9px 0 #a9a9a9,
+            0 50px 25px rgba(0, 0, 0, 0.7);
+    }
 }
 
 @-webkit-keyframes bounce {
     100% {
-    top: -20px;
-    text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
-    0 5px 0 #a9a9a9, 0 6px 0 #a9a9a9, 0 7px 0 #a9a9a9, 0 8px 0 #a9a9a9, 0 9px 0 #a9a9a9,
-    0 50px 25px rgba(0, 0, 0, 0.2);
-}
+        top: -20px;
+        text-shadow: 0 1px 0 #a9a9a9, 0 2px 0 #a9a9a9, 0 3px 0 #a9a9a9, 0 4px 0 #a9a9a9,
+            0 5px 0 #a9a9a9, 0 6px 0 #a9a9a9, 0 7px 0 #a9a9a9, 0 8px 0 #a9a9a9, 0 9px 0 #a9a9a9,
+            0 50px 25px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .continue {
@@ -122,6 +126,7 @@ h1 span:nth-child(9) {
     bottom: 0;
     font-size: 15px;
     width: 75px;
+    max-width: 100%;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.041);
     border: 3px solid white;
